@@ -5,22 +5,21 @@ body {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 1.2em;
     color: azure;
     text-align: center;
 
 }
 
-h1{
+#text-content h1{
     display: fixed;
-    font-size: 5.7em;
+    font-size: 3.7em;
     color: #f5f5f5;
     opacity: .4;
 }
 
-div {
+#text-content {
     position: relative;
-    top: -100px;
     font-size: 1.3em;
     width: 50%;
     line-height: 40px;
@@ -28,30 +27,42 @@ div {
 
 }
 
-div p {
-    color: darkslategrey;
+#text-content p {
+    color: #3ffff6;
+    position: relative;
+    top: -66px;
+    left: -500px;
+    animation: slideIn 1s ease-in-out 1s forwards;
+    padding-left: 35px
 }
 
-nav {
-    
-}
 
-nav p{
+nav ul li{
     display: inline-block;
     background-color: crimson;
     padding: 8px 12px;
     border-radius: 2px;
     transition: all .3s ease-in-out
 }
-nav p:hover{
+nav ul li:hover{
     box-shadow: 0 10px 18px -7px rgba(0, 0, 0, .33);
-    background-color: powderblue;
+    background-color: #3ffff6;
 }
 
-nav p a{
+nav ul li a{
     text-decoration: none;
     color: darkslategray;
 }
-nav p a:visited{
+nav ul li a:visited{
     color: darkslategray;
+}
+
+@keyframes slideIn {
+    from {
+        left: -600px;
+    }
+    to{
+        left: 0;
+    }
+
 }
